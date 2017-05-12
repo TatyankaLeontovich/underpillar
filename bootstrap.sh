@@ -28,7 +28,8 @@ sudo echo "deb http://mirror.fuel-infra.org/mcp-repos/newton/xenial newton main"
 sudo apt-get update
 sudo apt-get install -y salt-minion
 
-WORKDIR=$(pwd)
+WORKDIR=${WORKDIR:-'/tmp/'}
+cd ${WORKDIR}
 
 git clone https://github.com/dis-xcom/underpillar.git
 git clone https://review.gerrithub.io/ingwarr/salt-dnsmasq
