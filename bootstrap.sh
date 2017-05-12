@@ -74,4 +74,8 @@ find /srv/pillar/ -type f -exec sed -i "s/==IRONIC_DHCP_POOL_NETMASK_PREFIX==/${
 find /srv/pillar/ -type f -exec sed -i "s/==IRONIC_ENABLE_KEYSTONE==/${IRONIC_ENABLE_KEYSTONE}/g" {} +
 find /srv/pillar/ -type f -exec sed -i "s/==DNSMASQ_DONT_USE_EXTERNAL_DNS==/${DNSMASQ_DONT_USE_EXTERNAL_DNS}/g" {} +
 
+echo "### Starting Ironic bootstrap, please wait 5-10 min ###"
+
 sudo salt-call --local  --state-output=mixed state.highstate
+
+echo "### Ironic bootstrap completed ###"
