@@ -15,7 +15,7 @@ DNSMASQ_USE_EXTERNAL_DNS=${DNSMASQ_USE_EXTERNAL_DNS:-true}
 IRONIC_ENABLE_KEYSTONE=false && [[ "${IRONIC_PXE_MANAGER}" == "neutron" ]] && IRONIC_ENABLE_KEYSTONE=true
 
 # Inverse flag for dnsmasq config
-DNSMASQ_DONT_USE_EXTERNAL_DNS=false && [[ ${DNSMASQ_USE_EXTERNAL_DNS}=~false ]] && DNSMASQ_DONT_USE_EXTERNAL_DNS=true
+DNSMASQ_DONT_USE_EXTERNAL_DNS=false && [[ "${DNSMASQ_USE_EXTERNAL_DNS}" == false ]] && DNSMASQ_DONT_USE_EXTERNAL_DNS=true
 
 # Install latest salt
 wget -O - https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
