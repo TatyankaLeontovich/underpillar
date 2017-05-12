@@ -31,12 +31,12 @@ sudo apt-get install -y salt-minion
 WORKDIR=$(pwd)
 
 git clone https://github.com/dis-xcom/underpillar.git
-git clone https://github.com/ingwarr/salt-dnsmasq
-git clone https://github.com/ingwarr/salt-ironic
-git clone https://github.com/ingwarr/salt-tftpd-xinetd
-git clone https://github.com/ingwarr/salt-nginx
-git clone https://github.com/ingwarr/salt-neutron
-git clone https://github.com/ingwarr/salt-keystone
+git clone https://review.gerrithub.io/ingwarr/salt-dnsmasq
+git clone https://review.gerrithub.io/ingwarr/salt-ironic
+git clone https://review.gerrithub.io/ingwarr/salt-tftpd-xinetd
+git clone https://review.gerrithub.io/ingwarr/salt-nginx
+git clone https://review.gerrithub.io/ingwarr/salt-neutron
+git clone https://review.gerrithub.io/ingwarr/salt-keystone
 git clone https://github.com/salt-formulas/salt-formula-apache
 git clone https://github.com/salt-formulas/salt-formula-memcached
 git clone https://github.com/salt-formulas/salt-formula-mysql
