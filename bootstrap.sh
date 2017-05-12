@@ -47,13 +47,13 @@ mkdir -p /srv/salt
 
 cd /srv/salt
 ln -s ${WORKDIR}/salt-dnsmasq/dnsmasq
-ln -s ${WORKDIR}/apache/apache
-ln -s ${WORKDIR}/mysql/mysql
-ln -s ${WORKDIR}/rabbitmq/rabbitmq
+ln -s ${WORKDIR}/salt-formula-apache/apache
+ln -s ${WORKDIR}/salt-formula-mysql/mysql
+ln -s ${WORKDIR}/salt-formula-rabbitmq/rabbitmq
 ln -s ${WORKDIR}/salt-ironic/ironic
 ln -s ${WORKDIR}/salt-neutron/neutron
 ln -s ${WORKDIR}/salt-tftpd-xinetd/tftpd
-ln -s ${WORKDIR}/memcached/memcached
+ln -s ${WORKDIR}/salt-formula-memcached/memcached
 ln -s ${WORKDIR}/salt-keystone/keystone
 ln -s ${WORKDIR}/salt-nginx/nginx
 
