@@ -1,4 +1,4 @@
 base:
   '*':
-    - dnsmasq
+    - dnsmasq_proxy
     - nginx_proxy

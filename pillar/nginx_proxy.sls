@@ -20,6 +20,30 @@ nginx:
         host:
           name: apt.mirantis.com
           port: 80
+      salt-stack:
+        enabled: true
+        type: proxy
+        name: salt-stack
+        proxy:
+          websocket: true
+          host: repo.saltstack.local
+          port: 80
+          protocol: http
+        host:
+          name: repo.saltstack.com
+          port: 80
+      ubuntu-archive:
+        enabled: true
+        type: proxy
+        name: ubuntu-archive
+        proxy:
+          websocket: true
+          host: archive.ubuntu.local
+          port: 80
+          protocol: http
+        host:
+          name: archive.ubuntu.com
+          port: 80
     # bind:
     #   address: 127.0.0.1
     #   protocol: tcp
