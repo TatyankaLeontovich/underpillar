@@ -13,6 +13,7 @@ nginx:
         type: nginx_proxy
         name: apt-mirantis
         proxy:
+          headers: False
           host: apt.mirantis.com
           port: 80
           protocol: http
@@ -24,6 +25,7 @@ nginx:
         type: nginx_proxy
         name: salt-stack
         proxy:
+          headers: False
           host: repo.saltstack.com
           port: 80
           protocol: http
@@ -35,6 +37,7 @@ nginx:
         type: nginx_proxy
         name: ubuntu-archive
         proxy:
+          headers: False
           host: archive.ubuntu.com
           port: 80
           protocol: http
@@ -46,6 +49,7 @@ nginx:
         type: nginx_proxy
         name: mcp-mirror
         proxy:
+          headers: False
           host: mirror.mcp.mirantis.net
           port: 80
           protocol: http
@@ -57,6 +61,7 @@ nginx:
         type: nginx_proxy
         name: fuel-infra
         proxy:
+          headers: False
           host: mirror.fuel-infra.org
           port: 80
           protocol: http
@@ -68,6 +73,7 @@ nginx:
         type: nginx_proxy
         name: gerrit
         proxy:
+          headers: False
           host: gerrit.mcp.mirantis.net
           port: 443
           protocol: http
