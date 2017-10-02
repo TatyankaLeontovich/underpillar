@@ -4,7 +4,7 @@ dnsmasq:
     testing: false
     disable_dnsmasq_dns: false
     local_address: 10.70.0.122
-    address: /local.test/10.70.0.122
+    r_address: /local.test/10.70.0.122
     inventory_dhcp: false
     dhcp_pool_start: 10.70.0.200
     dhcp_pool_end: 10.70.0.205
