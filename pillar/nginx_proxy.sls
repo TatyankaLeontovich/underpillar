@@ -10,71 +10,68 @@ nginx:
     site:
       nginx-apt-mirantis:
         enabled: true
-        type: proxy
+        type: nginx_proxy
         name: apt-mirantis
         proxy:
-          host: apt.mirantis.local.test
+          host: apt.mirantis.com
           port: 80
           protocol: http
         host:
-          name: apt.mirantis.com
+          name: apt.mirantis.local.test
           port: 80
       salt-stack:
         enabled: true
-        type: proxy
+        type: nginx_proxy
         name: salt-stack
         proxy:
-          host: repo.saltstack.local.test
+          host: repo.saltstack.com
           port: 80
           protocol: http
         host:
-          name: repo.saltstack.com
+          name: repo.saltstack.local.test
           port: 80
       ubuntu-archive:
         enabled: true
-        type: proxy
+        type: nginx_proxy
         name: ubuntu-archive
         proxy:
-          host: archive.ubuntu.local.test
+          host: archive.ubuntu.com
           port: 80
           protocol: http
         host:
-          name: archive.ubuntu.com
+          name: archive.ubuntu.local.test
           port: 80
       mcp-mirror:
         enabled: true
-        type: proxy
+        type: nginx_proxy
         name: mcp-mirror
         proxy:
-          host: mirror.mcp.mirantis.local.test
+          host: mirror.mcp.mirantis.net
           port: 80
           protocol: http
         host:
-          name: mirror.mcp.mirantis.net
+          name: mirror.mcp.mirantis.local.test
           port: 80
       fuel-infra:
         enabled: true
-        type: proxy
+        type: nginx_proxy
         name: fuel-infra
         proxy:
-          host: mirror.fuel-infra.local.test/mcp-repos
+          host: mirror.fuel-infra.org
           port: 80
           protocol: http
         host:
-          name: mirror.fuel-infra.org/mcp-repos
+          name: mirror.fuel-infra.local.test
           port: 80
       gerrit:
         enabled: true
-        type: proxy
+        type: nginx_proxy
         name: gerrit
         proxy:
-          host: mirror.fuel-infra.local.test/mcp-repos
+          host: gerrit.mcp.mirantis.net
           port: 443
           protocol: http
         host:
           protocol: https
-          name: gerrit.mcp.mirantis.net
+          name: gerrit.mcp.mirantis.local.test
           port: 443
-
-
-
