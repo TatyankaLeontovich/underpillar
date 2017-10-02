@@ -13,8 +13,7 @@ nginx:
         type: proxy
         name: apt-mirantis
         proxy:
-          websocket: true
-          host: apt.mirantis.local
+          host: apt.mirantis.local.test
           port: 80
           protocol: http
         host:
@@ -25,8 +24,7 @@ nginx:
         type: proxy
         name: salt-stack
         proxy:
-          websocket: true
-          host: repo.saltstack.local
+          host: repo.saltstack.local.test
           port: 80
           protocol: http
         host:
@@ -37,18 +35,46 @@ nginx:
         type: proxy
         name: ubuntu-archive
         proxy:
-          websocket: true
-          host: archive.ubuntu.local
+          host: archive.ubuntu.local.test
           port: 80
           protocol: http
         host:
           name: archive.ubuntu.com
           port: 80
-    # bind:
-    #   address: 127.0.0.1
-    #   protocol: tcp
-    # worker:
-    #   limit:
-    #     nofile: 30000
+      mcp-mirror:
+        enabled: true
+        type: proxy
+        name: mcp-mirror
+        proxy:
+          host: mirror.mcp.mirantis.local.test
+          port: 80
+          protocol: http
+        host:
+          name: mirror.mcp.mirantis.net
+          port: 80
+      fuel-infra:
+        enabled: true
+        type: proxy
+        name: fuel-infra
+        proxy:
+          host: mirror.fuel-infra.local.test/mcp-repos
+          port: 80
+          protocol: http
+        host:
+          name: mirror.fuel-infra.org/mcp-repos
+          port: 80
+      gerrit:
+        enabled: true
+        type: proxy
+        name: gerrit
+        proxy:
+          host: mirror.fuel-infra.local.test/mcp-repos
+          port: 443
+          protocol: http
+        host:
+          protocol: https
+          name: gerrit.mcp.mirantis.net
+          port: 443
+
 
 
