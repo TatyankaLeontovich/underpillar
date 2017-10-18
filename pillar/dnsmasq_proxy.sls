@@ -9,7 +9,6 @@ dnsmasq:
     dhcp_pool_start: 10.70.0.200
     dhcp_pool_end: 10.70.0.205
     dnsmasq_router: ==LOCAL_DNS_IP==
-    network_interface: ens3
     dhcp_lease_time: 12h
     dnsmasq_dns_servers: 8.8.8.8,8.8.4.4
     file_url_port: 8081
