@@ -72,11 +72,16 @@ nginx:
         enabled: true
         type: nginx_proxy
         name: gerrit
+        ssl:
+          enabled: true
+          mode: normal
+          cert_file: /root/ssl-nginx.crt
+          key_file: /root/ssl-nginx.key
         proxy:
           headers: False
           host: gerrit.mcp.mirantis.net
           port: 443
-          protocol: http
+          protocol: https
         host:
           protocol: https
           name: gerrit.mcp.mirantis.local.test
