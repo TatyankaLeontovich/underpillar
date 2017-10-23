@@ -68,6 +68,18 @@ nginx:
         host:
           name: mirror.fuel-infra.local.test
           port: 80
+      glusterfs:
+        enabled: true
+        type: nginx_proxy
+        name: glusterfs
+        proxy:
+          headers: False
+          host: ppa.launchpad.net
+          port: 80
+          protocol: http
+        host:
+          name: ppa.launchpad.local.test
+          port: 80
       gerrit:
         enabled: true
         type: nginx_proxy
