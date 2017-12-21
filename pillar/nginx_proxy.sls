@@ -14,7 +14,7 @@ nginx:
         name: apt-mirantis
         proxy:
           headers: False
-          host: apt.mirantis.com
+          host: ==HOST_APT==
           port: 80
           protocol: http
         host:
@@ -26,7 +26,7 @@ nginx:
         name: salt-stack
         proxy:
           headers: False
-          host: repo.saltstack.com
+          host: ==HOST_SALTSTACK==
           port: 80
           protocol: http
         host:
@@ -38,7 +38,7 @@ nginx:
         name: ubuntu-archive
         proxy:
           headers: False
-          host: archive.ubuntu.com
+          host: ==HOST_ARCHIVE_UBUNTU==
           port: 80
           protocol: http
         host:
@@ -50,7 +50,7 @@ nginx:
         name: mcp-mirror
         proxy:
           headers: False
-          host: mirror.mcp.mirantis.net
+          host: ==HOST_MIRROR_MCP_MIRANTIS==
           port: 80
           protocol: http
         host:
@@ -74,7 +74,7 @@ nginx:
         name: glusterfs
         proxy:
           headers: False
-          host: ppa.launchpad.net
+          host: ==HOST_PPA_LAUNCHPAD==
           port: 80
           protocol: http
         host:
@@ -91,7 +91,7 @@ nginx:
           key_file: /root/ssl-nginx.key
         proxy:
           headers: False
-          host: gerrit.mcp.mirantis.net
+          host: ==HOST_GERRIT_MCP_MIRANTIS==
           port: 443
           protocol: https
         host:
